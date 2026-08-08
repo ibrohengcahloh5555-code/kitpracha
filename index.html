@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>พรรคกิจประชา - หน้าแรก (ข่าวสาร)</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Google Fonts (Kanit) -->
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS (แบบแยกไฟล์ย่อย) -->
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="icon" href="../photo/kritpachar.jpg">
+</head>
+
+<body>
+
+    <!-- Header & Navigation Bar -->
+    <header id="navbar">
+        <nav>
+            <div class="logo">
+                <img src="../photo/kritpachar.jpg" alt="โลโก้พรรคกิจประชา" class="logo-img">
+                พรรคกิจประชา
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li>
+                    <a href="index.html" class="nav-link active">
+                        <i class="fa-solid fa-newspaper"></i> ข่าวสาร
+                    </a>
+                </li>
+                <li>
+                    <a href="ideology.html" class="nav-link">
+                        <i class="fa-solid fa-compass"></i> อุดมการณ์
+                    </a>
+                </li>
+                <li>
+                    <a href="policies.html" class="nav-link">
+                        <i class="fa-solid fa-list-check"></i> นโยบาย
+                    </a>
+                </li>
+
+                <!-- เมนูดร็อปดาวน์เลือก "องค์การ" หรือ "สภา" -->
+                <li class="dropdown">
+                    <a href="candidates.html" class="nav-link">
+                        <i class="fa-solid fa-users"></i> ผู้ลงสมัคร <i
+                            class="fa-solid fa-chevron-down dropdown-icon"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="candidates.html?tab=organization">
+                                <i class="fa-solid fa-users-gear"></i> องค์การนักศึกษา
+                            </a>
+                        </li>
+                        <li>
+                            <a href="candidates.html?tab=council">
+                                <i class="fa-solid fa-building-columns"></i> สภานักศึกษา
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="achievements.html" class="nav-link">
+                        <i class="fa-solid fa-trophy"></i> ผลงานที่เคยทำ
+                    </a>
+                </li>
+                <li>
+                    <a href="election.html" class="nav-link">
+                        <i class="fa-solid fa-box-archive"></i> การเลือกตั้ง
+                    </a>
+                </li>
+            </ul>
+
+            <div class="hamburger" id="hamburger">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content: Hero Banner Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="badge">พรรคกิจประชา หมายเลข 1</span>
+            <h1>ศูนย์ข่าวสารและกิจกรรมพรรค</h1>
+            <p>เกาะติดข่าวสารการเคลื่อนไหว กิจกรรมล่าสุด และประกาศสำคัญจากพรรคกิจประชาเพื่อนักศึกษาทุกคน</p>
+        </div>
+    </section>
+
+    <!-- Main Content: News & Announcements Section -->
+    <section class="section-padding container">
+        <h2 class="section-title">ข่าวสารประชาสัมพันธ์ล่าสุด</h2>
+        <p class="section-subtitle">อัปเดตทุกการเคลื่อนไหวเพื่อสิทธิและสวัสดิการของเพื่อนนักศึกษา</p>
+
+        <div class="news-grid">
+
+            <!-- ข่าวที่ 1 -->
+            <article class="news-card">
+                <div class="news-img">
+                    <img src="../photo/ปกพรรค.jpg       " alt="ข่าวสาร 1">
+                    <span class="news-tag">ข่าวเด่น</span>
+                </div>
+                <div class="news-body">
+                    <span class="news-date"><i class="fa-regular fa-calendar"></i> 5 มีนาคม 2569</span>
+                    <h3>สรุปผลการสำรวจปัญหาจุดปลั๊กไฟในอาคารเรียนรวม</h3>
+                    <p>พรรคกิจประชาได้ลงพื้นที่รวบรวมข้อมูลปัญหาปลั๊กไฟไม่เพียงพอในพื้นที่อาคารเรียนรวมและโรงอาหาร
+                        เพื่อเตรียมยื่นข้อเสนอสวัสดิการต่อมหาวิทยาลัย...</p>
+                    <a href="#" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- ข่าวที่ 2 -->
+            <article class="news-card">
+                <div class="news-img">
+                    <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=600&q=80"
+                        alt="ข่าวสาร 2">
+                    <span class="news-tag">กิจกรรม</span>
+                </div>
+                <div class="news-body">
+                    <span class="news-date"><i class="fa-regular fa-calendar"></i> 1 มีนาคม 2569</span>
+                    <h3>ขอเชิญร่วมฟังการแสดงวิสัยทัศน์และเปิดเวทีดีเบตนโยบายพรรค</h3>
+                    <p>พบกับทีมผู้ลงสมัครพรรคกิจประชา หมายเลข 1 ทั้งหมด ในการแสดงวิสัยทัศน์และตอบคำถามสดจากนักศึกษา ณ
+                        ลานกิจกรรมกลางเวลา 16:00 น. เป็นต้นไป...</p>
+                    <a href="#" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- ข่าวที่ 3 -->
+            <article class="news-card">
+                <div class="news-img">
+                    <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80"
+                        alt="ข่าวสาร 3">
+                    <span class="news-tag">ประกาศ</span>
+                </div>
+                <div class="news-body">
+                    <span class="news-date"><i class="fa-regular fa-calendar"></i> 20 กุมภาพันธ์ 2569</span>
+                    <h3>เปิดตัวระบบ Helpdesk ออนไลน์รับเรื่องร้องเรียนนักศึกษา</h3>
+                    <p>นักศึกษาสามารถแจ้งปัญหาความไม่สะดวกหรือข้อเสนอแนะในการปรับปรุงสวัสดิการในรั้วมหาวิทยาลัย
+                        ผ่านช่องทางออนไลน์ของพรรคได้แล้ววันนี้...</p>
+                    <a href="#" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>พรรค<span>กิจประชา</span></h3>
+                    <p>มุ่งมั่น สร้างสรรค์ ทำจริง เพื่อประโยชน์สูงสุดของนักศึกษาทุกคน</p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>เมนูหลัก</h4>
+                    <ul>
+                        <li><a href="index.html">ข่าวสาร</a></li>
+                        <li><a href="ideology.html">อุดมการณ์</a></li>
+                        <li><a href="policies.html">นโยบาย</a></li>
+                        <li><a href="candidates.html">ผู้ลงสมัคร</a></li>
+                        <li><a href="election.html">การเลือกตั้ง</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social">
+                    <h4>ติดตามเรา</h4>
+                    <div class="social-icons">
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/19N13UrFCD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
+                            aria-label="Facebook">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="
+                        https://www.instagram.com/kitpracha.party?igsh=NTFnbjZpcXJiYmV3
+                        " target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer"
+                            aria-label="TikTok">
+                            <i class="fa-brands fa-tiktok"></i>
+                        </a>
+
+                        <!-- Line Official Account หรือ ลิงก์เพิ่มเพื่อน Line -->
+                        <a href="https://page.line.me/yourlineid" target="_blank" rel="noopener noreferrer"
+                            aria-label="Line">
+                            <i class="fa-brands fa-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 พรรคกิจประชา. สงวนลิขสิทธิ์ทั้งหมด.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Link -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
