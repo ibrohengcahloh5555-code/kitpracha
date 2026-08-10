@@ -12,7 +12,7 @@
     <!-- Google Fonts (Kanit) -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <!-- CSS รวมทั้งหมดอยู่ในไฟล์เดียว -->
+    <link rel="icon" href="kritpachar.jpg--">
 
 </head>
 
@@ -205,28 +205,27 @@
     <main id="page-candidates" class="page-section">
         <section class="section-padding container">
             <h2 class="section-title">ผู้สมัครรับเลือกตั้ง</h2>
-            <p class="section-subtitle">พรรคกิจประชา หมายเลข 1 มุ่งมั่นรับใช้และขับเคลื่อนพลังนักศึกษา</p>
+            <p class="section-subtitle">Kitpracha Better</p>
 
             <!-- ปุ่ม Toggle สลับหน้า องค์การ/สภานักศึกษา -->
             <div class="org-toggle-container">
                 <button class="org-tab-btn active" id="btn-tab-org" onclick="switchOrgTab('organization')">
-                    <i class="fa-solid fa-users-gear"></i> องค์การนักศึกษา (20 ตำแหน่ง)
+                    <i class="fa-solid fa-users-gear"></i> องค์การบริหาร องค์การนักศึกษา
                 </button>
                 <button class="org-tab-btn" id="btn-tab-council" onclick="switchOrgTab('council')">
-                    <i class="fa-solid fa-building-columns"></i> สภานักศึกษา (สัดส่วนทั่วไป & คณะ)
+                    <i class="fa-solid fa-building-columns"></i> องค์การบริหาร สภานักศึกษา (สัดส่วนทั่วไป & คณะ)
                 </button>
             </div>
 
             <!-- TAB 1: องค์การนักศึกษา -->
             <div id="tab-organization" class="org-tab-content active">
-                <h3 class="group-header-title"><i class="fa-solid fa-user-check"></i> ผู้ลงสมัครองค์การนักศึกษา (20
-                    ฝ่าย/ตำแหน่ง)</h3>
+                <h3 class="group-header-title"><i class="fa-solid fa-user-check"></i> ผู้ลงสมัครองค์การบริหาร องค์การนักศึกษา</h3>
 
                 <div class="candidate-photo-grid">
-                    <div class="photo-card" onclick="openModal('นายรุสฟาน อุโบ', 'นายกองค์การนักศึกษา', 'pang.JPG')">
+                    <div class="photo-card" onclick="openModal('อนุมัติ', 'นายกองค์การนักศึกษา', 'นายก.jpg')">
                         <div class="photo-frame"><img src="นายก.jpg" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">รุสฟาน</div>
+                            <div class="candidate-name-th">อนุมัติ หลังจิ</div>
                             <div class="candidate-surname-th">คณะรัฐศาสตร์</div>
                             <span class="candidate-position-tag">นายกองค์การนักศึกษา</span>
                         </div>
@@ -235,7 +234,7 @@
                     <div class="photo-card" onclick="openModal('นายริดวัน แวนิ', 'อุปนายกฝ่ายบริหาร', 'wang.jpg')">
                         <div class="photo-frame"><img src="รอง1.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ริดวัน</div>
+                            <div class="candidate-name-th">อัซมี อูมา</div>
                             <div class="candidate-surname-th">คณะมนุษยศาสตร์และสังคมศาสตร์</div>
                             <span class="candidate-position-tag">รองนายกคนที่ 1</span>
                         </div>
@@ -245,7 +244,7 @@
                         onclick="openModal('นางสาวแวนาเฟียนา หลงเน๊าะ', 'เหรัญญิก', 'waefiana.jpg')">
                         <div class="photo-frame"><img src="รอง2.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">แวนาเฟียนา</div>
+                            <div class="candidate-name-th">อามาลีนา มามุ</div>
                             <div class="candidate-surname-th">คณะศึกษาศาสตร์</div>
                             <span class="candidate-position-tag">รองนายกคนที่ 2</span>
                         </div>
@@ -255,7 +254,7 @@
                         onclick="openModal('นายซุลฟาฮ์มี อีซอ', 'เลขาธิการ', 'นาย ซุลฟาฮ์มีน อีซอ.jpg')">
                         <div class="photo-frame"><img src="เลขา.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ซุลฟาฮ์มี</div>
+                            <div class="candidate-name-th">นูรูลนูฮา เปาะและ</div>
                             <div class="candidate-surname-th">คณะศึกษาศาสตร์</div>
                             <span class="candidate-position-tag">เลขานุการ</span>
                         </div>
@@ -264,7 +263,7 @@
                     <div class="photo-card" onclick="openModal('นายอานัส แมแล', 'นายทะเบียน', 'นาย อนัส แมแล.jpg')">
                         <div class="photo-frame"><img src="เหรัญญิก.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">อานัส</div>
+                            <div class="candidate-name-th">ตาฮานี เหล็มหมีน</div>
                             <div class="candidate-surname-th">คณะรัฐศาสตร์</div>
                             <span class="candidate-position-tag">เหรัญญิก</span>
                         </div>
@@ -274,7 +273,7 @@
                         onclick="openModal('นายอัสนาวีย์ ปะกาฮะรัง', 'ฝ่ายประชาสัมพันธ์', 'อัสนาวีย์  ปะกาฮะรัง.JPG')">
                         <div class="photo-frame"><img src="ประชาสัมพันธ์.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">อัสนาวีย์</div>
+                            <div class="candidate-name-th">กัลมานี เจ๊ะฮะ</div>
                             <div class="candidate-surname-th">คณะวิทยาการสื่อสาร</div>
                             <span class="candidate-position-tag">ฝ่ายประชาสัมพันธ์</span>
                         </div>
@@ -284,7 +283,7 @@
                         onclick="openModal('นายอิบรอเฮง เจะเลาะ', 'ฝ่ายเทคโนโลยีสารสนเทศ', 'อิบรอเฮง เจะเลาะ .jpg')">
                         <div class="photo-frame"><img src="ศิลปะ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">อิบรอเฮง</div>
+                            <div class="candidate-name-th">อัลบัสรี เจะมะ</div>
                             <div class="candidate-surname-th">คณะศิลปกรรมศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายศิลปกรรม</span>
                         </div>
@@ -293,7 +292,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="พัสดุ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">บัสรี มิหนาแดง</div>
                             <div class="candidate-surname-th">คณะรัฐศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายพัสดุและอาคารสถานที่</span>
                         </div>
@@ -302,8 +301,8 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="สวัสดิการ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
-                            <div class="candidate-surname-th">คณะรัฐศาสตร์</div>
+                            <div class="candidate-name-th">แวนูรฟารอฮาน อาแว</div>
+                            <div class="candidate-surname-th">คณะศึกษาศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายสวัสดิการ</span>
                         </div>
                     </div>
@@ -311,7 +310,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="นักศึกษาสัมพันธ์.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">คอยรูนิซะห์ สากอ</div>
                             <div class="candidate-surname-th">คณะวิทยาศาสตร์และเทคโนโลยี</div>
                             <span class="candidate-position-tag">ฝ่ายนักศึกษาสัมพันธ์</span>
                         </div>
@@ -320,7 +319,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="วิเทศ.PNG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">มุมินะฮ์ สือรี</div>
                             <div class="candidate-surname-th">คณะศึกษาศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายวิเทศสัมพันธ์</span>
                         </div>
@@ -329,7 +328,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="วิชาการ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">ดารีมีย์ ตุหวันร่าเหม</div>
                             <div class="candidate-surname-th">คณะศึกษาศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายวิชาการ</span>
                         </div>
@@ -338,7 +337,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="วัฒนธรรม.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">มูฮำหมัดอัซซัด ดะเซ็ง</div>
                             <div class="candidate-surname-th">คณะวิทยาการอิสลาม</div>
                             <span class="candidate-position-tag">ฝ่ายศิลปะและวัฒนธรรม</span>
                         </div>
@@ -347,7 +346,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="บำเพ็ญ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">อัฟนันต์ บิลลาเต๊ะ</div>
                             <div class="candidate-surname-th">คณะรัฐศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายบำเพ็ญประโยชน์</span>
                         </div>
@@ -356,7 +355,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="กีฬา.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">มูฮำหมัดไฟซอล หะยีมามะ</div>
                             <div class="candidate-surname-th">คณะศึกษาศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายกีฬา</span>
                         </div>
@@ -365,7 +364,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="สื่อ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">ซอฟรอน ยากะจิ</div>
                             <div class="candidate-surname-th">คณะวิทยาการสื่อสาร</div>
                             <span class="candidate-position-tag">ฝ่ายสื่อ</span>
                         </div>
@@ -374,7 +373,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="ประสานงาน.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">อามีร แยแล</div>
                             <div class="candidate-surname-th">คณะรัฐศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายประสานงาน</span>
                         </div>
@@ -383,8 +382,8 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="พิธีการ.jpg" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
-                            <div class="candidate-surname-th">รักเรียน</div>
+                            <div class="candidate-name-th">อันดา สุหลง</div>
+                            <div class="candidate-surname-th">คณะรัฐศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายพิธีการ</span>
                         </div>
                     </div>
@@ -392,7 +391,7 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="พยาบาล.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
+                            <div class="candidate-name-th">โซฟียัน กะดะแซ</div>
                             <div class="candidate-surname-th">คณะพยาบาลศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายพยาบาล</span>
                         </div>
@@ -401,8 +400,8 @@
                     <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
                         <div class="photo-frame"><img src="กิจกรรม.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
-                            <div class="candidate-name-th">ภัทรา</div>
-                            <div class="candidate-surname-th">คณะรัฐศาสตร์</div>
+                            <div class="candidate-name-th">อานีส อาลีมามะ</div>
+                            <div class="candidate-surname-th">คณะมนุษยศาสตร์และสังคมศาสตร์</div>
                             <span class="candidate-position-tag">ฝ่ายกิจกรรม</span>
                         </div>
                     </div>
@@ -412,8 +411,7 @@
             <!-- TAB 2: สภานักศึกษา -->
             <div id="tab-council" class="org-tab-content">
                 <div class="council-section">
-                    <h3 class="group-header-title"><i class="fa-solid fa-layer-group"></i> สมาชิกสภานักศึกษา -
-                        แบบสัดส่วนทั่วไป (20 ลำดับ)</h3>
+                    <h3 class="group-header-title"><i class="fa-solid fa-layer-group"></i> สมาชิกสภานักศึกษา องค์การนักศึกษาสัดส่วนทั่วไป</h3>
                     <div class="candidate-photo-grid">
                         <div class="photo-card">
                             <div class="photo-frame"><img src="wang.jpg" alt="ผู้สมัคร"></div>
@@ -562,7 +560,7 @@
                         <div class="photo-card">
                             <div class="photo-frame"><img src="ปรมินทร์.jpg" alt="ผู้สมัคร"></div>
                             <div class="photo-card-info">
-                                <div class="candidate-name-th">ปรมินทร์ </div>
+                                <div class="candidate-name-th">ปรมินทร์ ใบปัญญา</div>
                                 <div class="candidate-surname-th">คณะมนุษยศาสตร์และสังคมศาสตร์</div>
                                 <span class="candidate-position-tag">สัดส่วนทั่วไป ลำดับ 17</span>
                             </div>
@@ -573,8 +571,7 @@
                 <hr class="section-divider">
 
                 <div class="council-section">
-                    <h2 class="sub-section-title"><i class="fa-solid fa-graduation-cap"></i> สมาชิกสภานักศึกษา -
-                        แบบสัดส่วนคณะ</h2>
+                    <h2 class="sub-section-title"><i class="fa-solid fa-graduation-cap"></i> สมาชิกสภานักศึกษา องค์การนักศึกษาสัดส่วนคณะ</h2>
                     <div class="faculty-block">
                         <div class="faculty-title"><i class="fa-solid fa-university"></i> คณะศึกษาศาสตร์</div>
                         <div class="candidate-photo-grid">
@@ -618,7 +615,7 @@
                                 <div class="photo-frame"><img src="มูรณี บาเหะ.jpeg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
                                     <div class="candidate-name-th">มูรนี บาเกะ</div>
-                                    <div class="candidate-surname-th">เจะเลาะ</div>
+                                    <div class="candidate-surname-th">คณะศึกษาศาสตร์</div>
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
@@ -632,7 +629,7 @@
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="มูฮำหมัด เจ๊ะเด็ง.jpg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
-                                    <div class="candidate-name-th">มููฮำหมัด เจ๊ะเด็ง</div>
+                                    <div class="candidate-name-th">มูฮำหมัด เจ๊ะเด็ง</div>
                                     <div class="candidate-surname-th">คณะมนุษยศาสตร์และสังคมศาสตร์</div>
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
@@ -641,7 +638,7 @@
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="ชัชวีร์ แอเหย็บ.jpg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
-                                    <div class="candidate-name-th">ชัชวีย์ แอเหย็บ</div>
+                                    <div class="candidate-name-th">ชัชวีร์ แอเหย็บ</div>
                                     <div class="candidate-surname-th">คณะมนุษยศาสตร์และสังคมศาสตร์</div>
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
@@ -746,7 +743,7 @@
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="อาหมัดบาดาวี.JPG" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
-                                    <div class="candidate-name-th">อาหมัดบาดาวี</div>
+                                    <div class="candidate-name-th">อาหมัดบาดาวี เจ๊ะเต๊ะ</div>
                                     <div class="candidate-surname-th">คณะวิทยาการสื่อสาร</div>
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
@@ -892,15 +889,17 @@
                 <div class="footer-social">
                     <h4>ติดตามเรา</h4>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/yourpagename" target="_blank" rel="noopener noreferrer"
+                        <a href="https://www.facebook.com/share/19N13UrFCD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
                             aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="https://www.instagram.com/yourusername" target="_blank" rel="noopener noreferrer"
+                        <a href="
+https://www.instagram.com/kitpracha.party?igsh=NTFnbjZpcXJiYmV3" target="_blank" rel="noopener noreferrer"
                             aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@yourusername" target="_blank" rel="noopener noreferrer"
+                        <a href="
+https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" rel="noopener noreferrer"
                             aria-label="TikTok">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
@@ -965,7 +964,7 @@
                 </div>
                 <div class="modal-profile-body">
                     <h4 style="color:var(--dark-color);"><i class="fa-solid fa-quote-left"></i> วิสัยทัศน์</h4>
-                    <p>"พร้อมทุ่มเทแรงกายแรงใจ ทำงานด้วยความโปร่งใส เพื่อประโยชน์สูงสุดของเพื่อนนักศึกษาทุกคน"</p>
+                    <p>"ยกระดับนักศึกษา ด้วยพลังมวลประชา"</p>
                 </div>
             `;
             modal.classList.add('show');
