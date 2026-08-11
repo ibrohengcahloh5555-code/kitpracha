@@ -12,7 +12,7 @@
     <!-- Google Fonts (Kanit) -->
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="kritpachar.jpg--">
+    <link rel="icon" href="kritpachar.jpg">
 
 </head>
 
@@ -145,28 +145,31 @@
 
     <!-- PAGE 2: อุดมการณ์พรรค -->
     <main id="page-ideology" class="page-section">
-        <section class="section-padding container">
-            <h2 class="section-title">อุดมการณ์พรรค</h2>
-            <p class="section-subtitle">หลักการที่พวกเรายึดมั่นและใช้เป็นแนวทางในการทำงานเพื่อนักศึกษาทุกคน</p>
+        <!-- อุดมการณ์พรรคกิจประชา -->
+        <section id="ideology" class="section-padding">
+            <h2 class="section-title">อุดมการณ์พรรคกิจประชา</h2><br>
+            <p class="section-subtitle">"นักศึกษา ประชาชน ประชาธิปไตย"</p>
 
-            <div class="grid-3">
-                <div class="card-box">
-                    <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>โปร่งใส ตรวจสอบได้</h3>
-                    <p>ยึดมั่นในธรรมาภิบาล
-                        พร้อมเปิดเผยการทำงานและการใช้งบประมาณสโมสรนักศึกษาให้ทุกคนรับรู้ผ่านระบบแดชบอร์ดออนไลน์</p>
+            <div class="ideology-grid">
+                <div class="ideology-card">
+                    <div class="ideology-icon">🎓</div>
+                    <h3>นักศึกษา</h3>
+                    <p>ยึดมั่นในศักดิ์ศรีและสิทธิของนักศึกษา มุ่งพัฒนาสวัสดิการ ทักษะดิจิทัล และส่งเสริมพลังคนรุ่นใหม่จากทุกพื้นที่อย่างเท่าเทียม
+                     เพื่อก้าวสู่การเป็นผู้นำแห่งอนาคต</p>
                 </div>
-                <div class="card-box">
-                    <div class="card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
-                    <h3>เท่าเทียม และครอบคลุม</h3>
-                    <p>เคารพความหลากหลายทางความคิด เพศ และวัฒนธรรม เพื่อสร้างสังคมนักศึกษาที่เป็นมิตร ปลอดภัย
-                        และเปิดกว้างสำหรับทุกคน</p>
+
+                <div class="ideology-card">
+                    <div class="ideology-icon">🤝</div>
+                    <h3>ประชาชน</h3>
+                    <p>เชื่อมโยงองค์ความรู้จากรั้วมหาวิทยาลัยสู่ชุมชน เคียงข้างประชาชน เข้าใจอัตลักษณ์ท้องถิ่น
+                        และนำเทคโนโลยีมาสร้างโอกาสทางเศรษฐกิจให้ยั่งยืน</p>
                 </div>
-                <div class="card-box">
-                    <div class="card-icon"><i class="fa-solid fa-bullseye"></i></div>
-                    <h3>เน้นผลประโยชน์นักศึกษา</h3>
-                    <p>พร้อมเป็นตัวแทนในการปกป้องสิทธิ สวัสดิการ และผลประโยชน์สูงสุดของเพื่อนนักศึกษา
-                        โดยไม่ยอมก้มหัวให้กับความไม่ถูกต้อง</p>
+
+                <div class="ideology-card">
+                    <div class="ideology-icon">⚖️</div>
+                    <h3>ประชาธิปไตย</h3>
+                    <p>ยึดมั่นในสิทธิ เสรีภาพ ความเสมอภาค และกระบวนการสันติวิธี กระจายอำนาจการตัดสินใจ
+                        และเปิดโอกาสให้ทุกคนมีส่วนร่วมอย่างโปร่งใส</p>
                 </div>
             </div>
         </section>
@@ -219,7 +222,8 @@
 
             <!-- TAB 1: องค์การนักศึกษา -->
             <div id="tab-organization" class="org-tab-content active">
-                <h3 class="group-header-title"><i class="fa-solid fa-user-check"></i> ผู้ลงสมัครองค์การบริหาร องค์การนักศึกษา</h3>
+                <h3 class="group-header-title"><i class="fa-solid fa-user-check"></i> ผู้ลงสมัครองค์การบริหาร
+                    องค์การนักศึกษา</h3>
 
                 <div class="candidate-photo-grid">
                     <div class="photo-card" onclick="openModal('อนุมัติ', 'นายกองค์การนักศึกษา', 'นายก.jpg')">
@@ -411,7 +415,8 @@
             <!-- TAB 2: สภานักศึกษา -->
             <div id="tab-council" class="org-tab-content">
                 <div class="council-section">
-                    <h3 class="group-header-title"><i class="fa-solid fa-layer-group"></i> สมาชิกสภานักศึกษา องค์การนักศึกษาสัดส่วนทั่วไป</h3>
+                    <h3 class="group-header-title"><i class="fa-solid fa-layer-group"></i> สมาชิกสภานักศึกษา
+                        องค์การนักศึกษาสัดส่วนทั่วไป</h3>
                     <div class="candidate-photo-grid">
                         <div class="photo-card">
                             <div class="photo-frame"><img src="wang.jpg" alt="ผู้สมัคร"></div>
@@ -571,7 +576,8 @@
                 <hr class="section-divider">
 
                 <div class="council-section">
-                    <h2 class="sub-section-title"><i class="fa-solid fa-graduation-cap"></i> สมาชิกสภานักศึกษา องค์การนักศึกษาสัดส่วนคณะ</h2>
+                    <h2 class="sub-section-title"><i class="fa-solid fa-graduation-cap"></i> สมาชิกสภานักศึกษา
+                        องค์การนักศึกษาสัดส่วนคณะ</h2>
                     <div class="faculty-block">
                         <div class="faculty-title"><i class="fa-solid fa-university"></i> คณะศึกษาศาสตร์</div>
                         <div class="candidate-photo-grid">
@@ -889,8 +895,8 @@
                 <div class="footer-social">
                     <h4>ติดตามเรา</h4>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/share/19N13UrFCD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
-                            aria-label="Facebook">
+                        <a href="https://www.facebook.com/share/19N13UrFCD/?mibextid=wwXIfr" target="_blank"
+                            rel="noopener noreferrer" aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
                         <a href="
