@@ -742,3 +742,267 @@ footer {
     margin-bottom: 12px;
     font-size: 1.4rem;
 }
+
+/* การจัดวาง Card หลัก */
+.portfolio-card {
+    text-align: left;
+    max-width: 750px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(112, 23, 5, 0.12); /* เงาสีแดงตามธีมพรรค */
+}
+
+/* หัวข้อและภาคเรียน */
+.portfolio-term {
+    color: var(--primary-color, #701705);
+    font-weight: 600;
+    font-size: 0.95rem;
+    display: inline-block;
+    background: rgba(112, 23, 5, 0.08);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.portfolio-title {
+    margin-top: 0.8rem;
+    margin-bottom: 1.2rem;
+    color: var(--dark-color, #222);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* จัดแกลเลอรีรูปภาพแบบ Grid (2 คอลัมน์) */
+.portfolio-gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* แบ่ง 2 คอลัมน์เท่ากัน */
+    gap: 12px;                             /* ระยะห่างระหว่างรูป */
+    margin-bottom: 1.2rem;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 180px;                         /* ความสูงคงที่เพื่อให้รูปสมส่วน */
+    border-radius: 10px;
+    overflow: hidden;                      /* ซ่อนส่วนเกินเมื่อรูปขยาย */
+    background-color: #f0f0f0;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                     /* ตัดครอบรูปไม่ให้สเกลเบี้ยว */
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+/* ลูกเล่นเมื่อเมาส์ชี้ที่รูป */
+.img-wrapper:hover img {
+    transform: scale(1.06);                /* รูปขยายใหญ่ขึ้นเล็กน้อย */
+}
+
+/* รายละเอียดผลงาน */
+.portfolio-desc {
+    color: var(--text-muted, #555);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* รองรับการแสดงผลบนหน้าจอมือถือ */
+@media (max-width: 576px) {
+    .portfolio-card {
+        padding: 20px;
+    }
+    
+    .portfolio-gallery {
+        grid-template-columns: repeat(2, 1fr); /* บนมือถือยังคงเป็น 2 คอลัมน์เล็กๆ */
+        gap: 8px;
+    }
+    
+    .img-wrapper {
+        height: 120px;                      /* ปรับรูปให้เล็กลงตามหน้าจอมือถือ */
+    }
+    
+    .portfolio-title {
+        font-size: 1.2rem;
+    }
+}
+
+/* ตกแต่งส่วนนโยบาย Kitpracha SPARK */
+.policy-section {
+    background-color: #0b2545; /* ใช้สีน้ำเงินเข้มตามธีมพรรคกิจประชา */
+    color: #ffffff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.spark-main-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.section-subtitle {
+    color: #cbd5e1;
+    font-size: 1rem;
+    margin-bottom: 35px;
+}
+
+/* ปุ่มตัวอักษร SPARK ตรงกลาง */
+.spark-interactive-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.spark-letter {
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 900;
+    width: 75px;
+    height: 75px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.spark-letter:hover {
+    background: #ffffff;
+    color: #0b2545;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.4);
+}
+
+.spark-letter.active {
+    background: #38bdf8; /* สีสว่างสำหรับสถานะคลิกเลือก */
+    color: #0b2545;
+    border-color: #38bdf8;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+/* พื้นที่แสดงรายละเอียดนโยบาย */
+.policy-display-area {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.policy-detail-card {
+    display: none; /* ซ่อนไว้ก่อน จะแสดงผลเมื่อกดปุ่ม */
+    background: #ffffff;
+    color: #1e293b;
+    padding: 35px;
+    border-radius: 20px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.4s ease-in-out;
+}
+
+.policy-detail-card.active {
+    display: block; /* แสดงเฉพาะตัวที่เลือก */
+}
+
+.policy-card-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+
+.policy-big-letter {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #0b2545;
+    line-height: 1;
+}
+
+.policy-card-header h3 {
+    font-size: 1.8rem;
+    color: #0b2545;
+    margin: 0;
+}
+
+.policy-card-header .tagline {
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 3px;
+}
+
+.policy-intro {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #334155;
+    margin-bottom: 20px;
+}
+
+.policy-checklist h4 {
+    color: #0b2545;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.policy-checklist ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.policy-checklist li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+.policy-checklist li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #0284c7;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* เอฟเฟกต์การแสดงผลแบบนุ่มนวล */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* รองรับมือถือ */
+@media (max-width: 600px) {
+    .spark-letter {
+        width: 55px;
+        height: 55px;
+        font-size: 1.8rem;
+    }
+    .policy-detail-card {
+        padding: 20px;
+    }
+    .policy-big-letter {
+        font-size: 2.5rem;
+    }
+    .policy-card-header h3 {
+        font-size: 1.4rem;
+    }
+}
