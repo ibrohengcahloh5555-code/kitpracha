@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>พรรคกิจประชา - มุ่งมั่น สร้างสรรค์ ทำจริง</title>
+    <title>kitpracah - พรรคกิจประชา</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -22,8 +22,7 @@
     <header id="navbar">
         <nav>
             <div class="logo">
-                <img src="https://scontent-bkk1-1.xx.fbcdn.net/v/t39.30808-6/301998673_479742937495846_8703341393897800953_n.jpg?stp=dst-jpg_tt6&cstp=mx750x750&ctp=s750x750&_nc_cat=106&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=Xnb6W0IdQNkQ7kNvwEFnQJK&_nc_oc=Adq9XtlJ3AgE42coR0HuyTRVXUGsBDK_wvQ3F7qLfOXLGyR4Xwcr4SAEd69-HNTDdKQ&_nc_zt=23&_nc_ht=scontent-bkk1-1.xx&_nc_gid=su1UbnHG2oLveEBMeu8yOA&_nc_ss=7a2a8&oh=00_AQFoLBh2l_4d-lmTVHKwUXByR1XOTA-Iq9SkesvbZ017SA&oe=6A7D83AE"
-                    alt="โลโก้พรรคกิจประชา" class="logo-img">
+                <img src="kritpachar.jpg" alt="โลโก้พรรคกิจประชา" class="logo-img">
                 พรรค<span>กิจประชา</span>
             </div>
 
@@ -154,8 +153,9 @@
                 <div class="ideology-card">
                     <div class="ideology-icon">🎓</div>
                     <h3>นักศึกษา</h3>
-                    <p>ยึดมั่นในศักดิ์ศรีและสิทธิของนักศึกษา มุ่งพัฒนาสวัสดิการ ทักษะดิจิทัล และส่งเสริมพลังคนรุ่นใหม่จากทุกพื้นที่อย่างเท่าเทียม
-                     เพื่อก้าวสู่การเป็นผู้นำแห่งอนาคต</p>
+                    <p>ยึดมั่นในศักดิ์ศรีและสิทธิของนักศึกษา มุ่งพัฒนาสวัสดิการ ทักษะดิจิทัล
+                        และส่งเสริมพลังคนรุ่นใหม่จากทุกพื้นที่อย่างเท่าเทียม
+                        เพื่อก้าวสู่การเป็นผู้นำแห่งอนาคต</p>
                 </div>
 
                 <div class="ideology-card">
@@ -177,28 +177,177 @@
 
     <!-- PAGE 3: นโยบายพรรค -->
     <main id="page-policies" class="page-section">
-        <section class="section-padding container">
-            <h2 class="section-title">นโยบายพรรค</h2>
-            <p class="section-subtitle">ข้อเสนอที่จับต้องได้ นำไปปฏิบัติได้จริง
-                เพื่อคุณภาพชีวิตที่ดีขึ้นในรั้วมหาวิทยาลัย</p>
+        <!-- Policy Section: Kitpracha SPARK -->
+        <section id="policy" class="policy-section">
+            <div class="container">
+                <h3 class="spark-main-title">Kitpracha</h3>
+                <!-- Interactive SPARK Letters -->
+                <div class="spark-interactive-container">
+                    <button class="spark-letter active" onclick="showPolicy('S')">S</button>
+                    <button class="spark-letter" onclick="showPolicy('P')">P</button>
+                    <button class="spark-letter" onclick="showPolicy('A')">A</button>
+                    <button class="spark-letter" onclick="showPolicy('R')">R</button>
+                    <button class="spark-letter" onclick="showPolicy('K')">K</button>
+                </div>
 
-            <div class="grid-3">
-                <div class="policy-card">
-                    <div class="policy-badge">สวัสดิการ</div>
-                    <h3>1. ปรับปรุงสวัสดิการและสิ่งอำนวยความสะดวก</h3>
-                    <p>เพิ่มจุดปลั๊กไฟ ห้องอ่านหนังสือ 24 ชม. ในช่วงสอบ
-                        และปรับปรุงไฟส่องสว่างตามจุดเสี่ยงรอบมหาวิทยาลัยเพื่อความปลอดภัย</p>
-                </div>
-                <div class="policy-card">
-                    <div class="policy-badge">การเดินทาง</div>
-                    <h3>2. ผลักดันการเดินทางที่ปลอดภัยและสะดวก</h3>
-                    <p>เพิ่มจำนวนรถรับ-ส่งภายในมหาวิทยาลัย (EV Shuttle)
-                        และประสานงานปรับปรุงทางเท้าให้รองรับผู้ใช้งานทุกคน</p>
-                </div>
-                <div class="policy-card">
-                    <div class="policy-badge">กิจกรรม</div>
-                    <h3>3. สนับสนุนกิจกรรมและการเรียนรู้</h3>
-                    <p>กระจายงบประมาณจัดชมรมอย่างทั่วถึง และเพิ่มทุนสนับสนุนการแข่งขัน/สัมมนานอกสถานที่ของนักศึกษา</p>
+                <!-- Dynamic Policy Content Boxes -->
+                <div class="policy-display-area">
+
+                    <!-- S : Social Student Voice -->
+                    <div id="policy-S" class="policy-detail-card active">
+                        <div class="policy-card-header">
+                            <span class="policy-big-letter">S</span>
+                            <div>
+                                <h3>Social Student Voice</h3>
+                                <p class="tagline">เสียงประชาคม</p>
+                            </div>
+                        </div>
+                        <p class="policy-intro">
+                            นักศึกษาทุกคนคือส่วนหนึ่งของประชาคมมหาวิทยาลัย
+                            เราต้องการสร้างพื้นที่และกลไกที่ทำให้นักศึกษาสามารถสะท้อนปัญหา ความต้องการ
+                            และข้อเสนอได้อย่างสะดวก พร้อมผลักดันให้เสียงเหล่านั้นถูกนำไปสู่การแก้ไขอย่างเป็นรูปธรรม
+                        </p>
+                        <div class="policy-checklist">
+                            <h4>แนวทางดำเนินงาน:</h4>
+                            <ul>
+                                <li><strong>Student Voice Platform:</strong> พัฒนาช่องทางรับฟังความคิดเห็น ข้อเสนอ
+                                    และปัญหาของนักศึกษาอย่างเป็นระบบ พร้อมติดตามผลการดำเนินงาน</li>
+                                <li><strong>Student Forum:</strong> สร้างพื้นที่พูดคุยระหว่างนักศึกษา องค์กรนักศึกษา
+                                    และหน่วยงานที่เกี่ยวข้อง เพื่อร่วมกันเสนอปัญหาและออกแบบแนวทางแก้ไข</li>
+                                <li><strong>Bike for Students:</strong>
+                                    ผลักดันโครงการสนับสนุนจักรยานสำหรับนักศึกษาที่ขาดแคลนทุนทรัพย์ ยืมใช้งาน 1
+                                    ภาคการศึกษา เพื่อลดภาระค่าใช้จ่ายและส่งเสริมความยั่งยืน (SDGs)</li>
+                                <li><strong>Mental Health:</strong>
+                                    ผลักดันการพัฒนาช่องทางรับฟังปัญหาสุขภาพจิตของนักศึกษา
+                                    เพื่อให้เข้าถึงการคำปรึกษาได้อย่างทันท่วงที</li>
+                                <li><strong>ลานเลเพื่อประชาคม:</strong>
+                                    ติดตามความคืบหน้าการปรับปรุงลานเลเพื่อให้กลับมาเปิดใช้งานเป็นพื้นที่สาธารณะสำหรับนักศึกษาโดยเร็ว
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- P : Participation -->
+                    <div id="policy-P" class="policy-detail-card">
+                        <div class="policy-card-header">
+                            <span class="policy-big-letter">P</span>
+                            <div>
+                                <h3>Participation</h3>
+                                <p class="tagline">เวทีศักยภาพ</p>
+                            </div>
+                        </div>
+                        <p class="policy-intro">
+                            กิจกรรมนักศึกษาไม่ควรจำกัดอยู่เพียงรูปแบบเดิม ๆ
+                            เราต้องการสร้างพื้นที่ที่เปิดโอกาสให้นักศึกษาได้เรียนรู้ ลงมือทำ แสดงศักยภาพ สร้างเครือข่าย
+                            และมีส่วนร่วมทั้งภายในและภายนอกมหาวิทยาลัย
+                        </p>
+                        <div class="policy-checklist">
+                            <h4>แนวทางดำเนินงาน:</h4>
+                            <ul>
+                                <li><strong>PSU GLOBAL:</strong> มหกรรมการแข่งขันและการเรียนรู้ เปิดพื้นที่พัฒนานวัตกรรม
+                                    ความคิดสร้างสรรค์ และทักษะในศตวรรษที่ 21</li>
+                                <li><strong>PSU SPACE:</strong> เปิดพื้นที่การมีส่วนร่วมรูปแบบใหม่ เช่น Board Game
+                                    เคลื่อนที่ และกิจกรรมสร้างสรรค์เพื่อการแลกเปลี่ยน</li>
+                                <li><strong>PSU WELLNESS:</strong> สร้างพื้นที่สำหรับคนรักสุขภาพ ส่งเสริมการออกกำลังกาย
+                                    สุขภาวะ และการดูแลตนเอง</li>
+                                <li><strong>UNITY FOR IMPACT CAMP SS2:</strong> ค่ายเรียนรู้ชุมชน
+                                    ทำงานร่วมกับพื้นที่จริงเพื่อนำความรู้ไปสร้างประโยชน์ต่อสังคม</li>
+                                <li><strong>PTU CULTURAL:</strong>
+                                    สร้างความร่วมมือระหว่างสถาบันผ่านกิจกรรมแลกเปลี่ยนวัฒนธรรมและการทำประโยชน์เพื่อสังคม
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- A : Access & Care -->
+                    <div id="policy-A" class="policy-detail-card">
+                        <div class="policy-card-header">
+                            <span class="policy-big-letter">A</span>
+                            <div>
+                                <h3>Access & Care</h3>
+                                <p class="tagline">สวัสดิการสารสนเทศ</p>
+                            </div>
+                        </div>
+                        <p class="policy-intro">
+                            นักศึกษาทุกคนควรได้รับสิทธิ สวัสดิการ ข้อมูล และความช่วยเหลืออย่างทั่วถึง
+                            เราจึงมุ่งพัฒนาระบบสวัสดิการให้เข้าถึงง่าย รวดเร็ว เท่าเทียม และตอบโจทย์ชีวิตจริงของนักศึกษา
+                        </p>
+                        <div class="policy-checklist">
+                            <h4>แนวทางดำเนินงาน:</h4>
+                            <ul>
+                                <li><strong>Student Welfare for All:</strong>
+                                    ผลักดันให้นักศึกษาทุกคนสามารถเข้าถึงสิทธิและสวัสดิการขั้นพื้นฐานด้วยความทั่วถึง
+                                    เท่าเทียม และครอบคลุม</li>
+                                <li><strong>Central Parcel Point:</strong>
+                                    จัดตั้งจุดรับพัสดุส่วนกลางพร้อมระบบกล้องวงจรปิด (CCTV)
+                                    เพิ่มความปลอดภัยและลดการสูญหาย</li>
+                                <li><strong>Emergency Pad Point:</strong>
+                                    ผลักดันการจัดให้มีผ้าอนามัยฉุกเฉินสำหรับนักศึกษา โดยเฉพาะบริเวณอาคารเรียนรวม</li>
+                                <li><strong>Student Emergency Channel:</strong> พัฒนาช่องทางแจ้งเหตุฉุกเฉินและการคุกคาม
+                                    เพื่อให้เข้าถึงความช่วยเหลือได้อย่างรวดเร็ว</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- R : Rights -->
+                    <div id="policy-R" class="policy-detail-card">
+                        <div class="policy-card-header">
+                            <span class="policy-big-letter">R</span>
+                            <div>
+                                <h3>Rights</h3>
+                                <p class="tagline">สิทธิและเสรีภาพ</p>
+                            </div>
+                        </div>
+                        <p class="policy-intro">
+                            พรรคกิจประชาเชื่อว่านักศึกษาทุกคนควรได้รับการเคารพในสิทธิ เสรีภาพ ศักดิ์ศรี
+                            และความหลากหลายของตัวตน เราต้องการสร้างพื้นที่ที่นักศึกษาสามารถแสดงความคิดเห็น ตั้งคำถาม
+                            แลกเปลี่ยนมุมมอง และมีส่วนร่วมกับประเด็นทางสังคมและการเมืองได้อย่างสร้างสรรค์
+                        </p>
+                        <div class="policy-checklist">
+                            <h4>แนวทางดำเนินงาน:</h4>
+                            <ul>
+                                <li><strong>Freedom of Expression:</strong>
+                                    ส่งเสริมพื้นที่สำหรับการแสดงความคิดเห็นและแลกเปลี่ยนมุมมองอย่างสร้างสรรค์</li>
+                                <li><strong>Student Identity:</strong> สนับสนุนให้นักศึกษาสามารถแสดงออกถึงตัวตน ความคิด
+                                    และความหลากหลายของตนเองได้อย่างเหมาะสม</li>
+                                <li><strong>Student Rights Awareness:</strong>
+                                    ส่งเสริมความรู้ความเข้าใจเกี่ยวกับสิทธิของนักศึกษา
+                                    เพื่อให้สามารถใช้สิทธิได้อย่างมีความรับผิดชอบ</li>
+                                <li><strong>Democratic Space:</strong>
+                                    สร้างพื้นที่เรียนรู้และมีส่วนร่วมในประเด็นประชาธิปไตย สังคม และการเมืองของนักศึกษา
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- K : KIT Start Change -->
+                    <div id="policy-K" class="policy-detail-card">
+                        <div class="policy-card-header">
+                            <span class="policy-big-letter">K</span>
+                            <div>
+                                <h3>KIT Start Change</h3>
+                                <p class="tagline">ปัญญาชน</p>
+                            </div>
+                        </div>
+                        <p class="policy-intro">
+                            ส่งเสริมพลังปัญญาชนด้วยการจุดประกายการเปลี่ยนแปลง พัฒนานวัตกรรม และสร้างสรรค์สังคมร่วมกัน
+                        </p>
+                        <div class="policy-checklist">
+                            <h4>แนวทางดำเนินงาน:</h4>
+                            <ul>
+                                <li><strong>SOCIAL HACKATHON:</strong> เปิดพื้นที่ให้นักศึกษาได้ร่วมกันคิด
+                                    วิเคราะห์ปัญหาสังคม ออกแบบแนวทางแก้ไข และนำเสนอไอเดียพัฒนาจริง</li>
+                                <li><strong>STUDENT CHANGE MAKER:</strong>
+                                    ผลักดันโครงการเพื่อสังคมของนักศึกษาให้กลายเป็นจริง
+                                    ผ่านการให้คำปรึกษาและสนับสนุนจากองค์กร</li>
+                                <li><strong>KIT KNOWLEDGE SPACE:</strong> พื้นที่แลกเปลี่ยนความรู้ระหว่างนักศึกษา
+                                    เปิดโอกาสให้นำความถนัดมาแบ่งปันให้ผู้อื่น</li>
+                                <li><strong>FUTURE SKILLS:</strong> ส่งเสริมทักษะอนาคต เช่น Critical Thinking,
+                                    Communication, Leadership, Collaboration และ Problem Solving</li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -810,12 +959,32 @@
         <section class="section-padding container">
             <h2 class="section-title">ผลงานที่เคยทำ</h2>
             <p class="section-subtitle">เส้นทางการขับเคลื่อนที่ผ่านการพิสูจน์มาแล้วด้วยการลงมือทำจริง</p>
-            <div class="card-box" style="text-align: left; max-width: 800px; margin: 0 auto;">
-                <span style="color:var(--primary-color); font-weight:600;">ภาคเรียนที่ 1 / 2567</span>
-                <h3 style="margin-top: 0.5rem; color:var(--dark-color);">โครงการปรับปรุงพื้นที่อ่านหนังสือกลางแจ้ง</h3>
-                <p style="color:var(--text-muted); margin-top: 0.5rem;">
+
+            <!-- Card ผลงาน -->
+            <div class="portfolio-card">
+                <span class="portfolio-term">ภาคเรียนที่ 1 / 2567</span>
+                <h3 class="portfolio-title">โครงการ Unity for Impact Camp</h3>
+
+                <!-- แกลเลอรีรูปภาพแบบ Grid 2x2 -->
+                <div class="portfolio-gallery">
+                    <div class="img-wrapper">
+                        <img src="ต01.jpg" alt="ภาพบรรยากาศโครงการ 1" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="ต02.jpg" alt="ภาพบรรยากาศโครงการ 2" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="ต03.jpg" alt="ภาพบรรยากาศโครงการ 3" loading="lazy">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="ต04.jpg" alt="ภาพบรรยากาศโครงการ 4" loading="lazy">
+                    </div>
+                </div>
+
+                <p class="portfolio-desc">
                     ประสานงานติดตั้งโต๊ะนั่งอ่านหนังสือพร้อมปลั๊กไฟและระบบ Wi-Fi เพิ่มเติม ณ
-                    บริเวณลานกิจกรรมส่วนกลางสำเร็จ</p>
+                    บริเวณลานกิจกรรมส่วนกลางสำเร็จ
+                </p>
             </div>
         </section>
     </main>
@@ -824,7 +993,8 @@
     <main id="page-election" class="page-section">
         <section class="section-padding container">
             <h2 class="section-title">ข้อมูลการเลือกตั้ง</h2>
-            <p class="section-subtitle">นับถอยหลังสู่การเลือกตั้งสโมสรและสภานักศึกษา</p>
+            <p class="section-subtitle">นับถอยหลังสู่การเลือกตั้งองค์การบริหาร องค์การนักศึกษา&องค์การบริหาร สภานักศึกษา
+            </p>
 
             <div class="card-box election-card">
 
@@ -1029,6 +1199,27 @@ https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" 
         document.addEventListener('DOMContentLoaded', () => {
             startCountdown();
         });
+
+
+        function showPolicy(letter) {
+            // 1. ซ่อนกล่องรายละเอียดนโยบายทั้งหมดก่อน
+            const allCards = document.querySelectorAll('.policy-detail-card');
+            allCards.forEach(card => card.classList.remove('active'));
+
+            // 2. ยกเลิกสถานะปุ่มตัวอักษรทั้งหมด
+            const allButtons = document.querySelectorAll('.spark-letter');
+            allButtons.forEach(btn => btn.classList.remove('active'));
+
+            // 3. แสดงกล่องรายละเอียดเฉพาะตัวที่ถูกคลิก
+            const targetCard = document.getElementById('policy-' + letter);
+            if (targetCard) {
+                targetCard.classList.add('active');
+            }
+
+            // 4. เปลี่ยนปุ่มตัวอักษรที่ถูกคลิกให้เป็นสถานะ active
+            event.currentTarget.classList.add('active');
+        }
+
     </script>
 </body>
 
