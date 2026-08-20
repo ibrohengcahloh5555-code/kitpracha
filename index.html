@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kitpracah - พรรคกิจประชา</title>
+    <title>kitpracha - พรรคกิจประชา</title>
 
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -13,7 +13,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="kritpachar.jpg">
-
 </head>
 
 <body>
@@ -46,8 +45,7 @@
                 <!-- เมนูดร็อปดาวน์เลือก "องค์การ" หรือ "สภา" -->
                 <li class="dropdown">
                     <a onclick="switchPage('candidates')" class="nav-link" id="nav-candidates">
-                        <i class="fa-solid fa-users"></i> ผู้ลงสมัคร <i
-                            class="fa-solid fa-chevron-down dropdown-icon"></i>
+                        <i class="fa-solid fa-users"></i> ผู้ลงสมัคร <i class="fa-solid fa-chevron-down dropdown-icon"></i>
                     </a>
                     <ul class="dropdown-menu">
                         <li>
@@ -82,10 +80,43 @@
     <!-- PAGE 1: หน้าหลัก (ศูนย์ข่าวสารและกิจกรรม) -->
     <main id="page-home" class="page-section active">
         <section class="hero-section">
+            <!-- 1. ชั้นสไลด์พื้นหลัง (Background Slider) -->
+            <!-- 1. ชั้นสไลด์พื้นหลัง (Background Slider) -->
+            <div class="hero-bg-slider" id="heroBgTrack">
+                <div class="hero-bg-slide active">
+                    <img src="3.png" alt="สมาชิกสภานักศึกษาสัดส่วนทั่วไป">
+                </div>
+                <div class="hero-bg-slide">
+                    <img src="องค์การ.png" alt="ผู้ลงสมัครองค์การบริหาร องค์การนักศึกษา">
+                </div>
+                
+                <!-- 👇 เพิ่มรูปที่ 3, 4 ตรงนี้ได้เลย 👇 -->
+                <div class="hero-bg-slide">
+                    <img src="สภานักศึกษา.png" alt="สมาชิกสภานักศึกษาสัดส่วนทั่วไป">
+                </div>
+                <div class="hero-bg-slide">
+                    <img src="3.png" alt="ภาพกิจกรรม 2">
+                </div>
+            </div>
+
+            <div class="hero-overlay"></div>
+
+            <button class="hero-nav-btn prev" onclick="moveSlide(-1)" aria-label="Previous">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button class="hero-nav-btn next" onclick="moveSlide(1)" aria-label="Next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+
             <div class="hero-content">
-                <span class="badge">พรรคกิจประชา หมายเลข 1</span>
-                <h1>ศูนย์ข่าวสารและกิจกรรมพรรค</h1>
-                <p>เกาะติดข่าวสารการเคลื่อนไหว กิจกรรมล่าสุด และประกาศสำคัญจากพรรคกิจประชาเพื่อนักศึกษาทุกคน</p>
+                <!-- จุดระบุสถานะ (Dots) -->
+                <div class="hero-indicators">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <!-- 👇 เพิ่มจุดตามจำนวนรูปที่เพิ่มเข้ามา (ลำดับ 2, 3...) 👇 -->
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                    <span class="dot" onclick="goToSlide(3)"></span>
+                </div>
             </div>
         </section>
 
@@ -96,45 +127,39 @@
             <div class="news-grid">
                 <article class="news-card">
                     <div class="news-img">
-                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80"
-                            alt="ข่าว 1">
+                        <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=600&q=80" alt="ข่าว 1">
                         <span class="news-tag">ข่าวเด่น</span>
                     </div>
                     <div class="news-body">
                         <span class="news-date"><i class="fa-regular fa-calendar"></i> 5 มีนาคม 2569</span>
                         <h3>สรุปผลการสำรวจปัญหาจุดปลั๊กไฟในอาคารเรียนรวม</h3>
-                        <p>พรรคกิจประชาได้ลงพื้นที่รวบรวมข้อมูลปัญหาปลั๊กไฟไม่เพียงพอในพื้นที่อาคารเรียนรวมเพื่อเตรียมยื่นข้อเสนอสวัสดิการต่อมหาวิทยาลัย...
-                        </p>
+                        <p>พรรคกิจประชาได้ลงพื้นที่รวบรวมข้อมูลปัญหาปลั๊กไฟไม่เพียงพอในพื้นที่อาคารเรียนรวมเพื่อเตรียมยื่นข้อเสนอสวัสดิการต่อมหาวิทยาลัย...</p>
                         <a href="#" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <article class="news-card">
                     <div class="news-img">
-                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=600&q=80"
-                            alt="ข่าว 2">
+                        <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=600&q=80" alt="ข่าว 2">
                         <span class="news-tag">กิจกรรม</span>
                     </div>
                     <div class="news-body">
                         <span class="news-date"><i class="fa-regular fa-calendar"></i> 1 มีนาคม 2569</span>
                         <h3>ขอเชิญร่วมฟังการแสดงวิสัยทัศน์และเปิดเวทีดีเบตนโยบายพรรค</h3>
-                        <p>พบกับทีมผู้ลงสมัครพรรคกิจประชา หมายเลข 1 ทั้งหมด ในการแสดงวิสัยทัศน์และตอบคำถามสดจากนักศึกษา
-                            ณ ลานกิจกรรมกลาง...</p>
+                        <p>พบกับทีมผู้ลงสมัครพรรคกิจประชา หมายเลข 1 ทั้งหมด ในการแสดงวิสัยทัศน์และตอบคำถามสดจากนักศึกษา ณ ลานกิจกรรมกลาง...</p>
                         <a href="#" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
 
                 <article class="news-card">
                     <div class="news-img">
-                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80"
-                            alt="ข่าว 3">
+                        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" alt="ข่าว 3">
                         <span class="news-tag">ประกาศ</span>
                     </div>
                     <div class="news-body">
                         <span class="news-date"><i class="fa-regular fa-calendar"></i> 20 กุมภาพันธ์ 2569</span>
                         <h3>เปิดตัวระบบ Helpdesk ออนไลน์รับเรื่องร้องเรียนนักศึกษา</h3>
-                        <p>นักศึกษาสามารถแจ้งปัญหาความไม่สะดวกหรือข้อเสนอแนะในการปรับปรุงสวัสดิการผ่านช่องทางออนไลน์ของพรรคได้แล้ววันนี้...
-                        </p>
+                        <p>นักศึกษาสามารถแจ้งปัญหาความไม่สะดวกหรือข้อเสนอแนะในการปรับปรุงสวัสดิการผ่านช่องทางออนไลน์ของพรรคได้แล้ววันนี้...</p>
                         <a href="#" class="news-link">อ่านต่อ <i class="fa-solid fa-arrow-right"></i></a>
                     </div>
                 </article>
@@ -144,32 +169,27 @@
 
     <!-- PAGE 2: อุดมการณ์พรรค -->
     <main id="page-ideology" class="page-section">
-        <!-- อุดมการณ์พรรคกิจประชา -->
-        <section id="ideology" class="section-padding">
-            <h2 class="section-title">อุดมการณ์พรรคกิจประชา</h2><br>
+        <section id="ideology" class="section-padding container">
+            <h2 class="section-title">อุดมการณ์พรรคกิจประชา</h2>
             <p class="section-subtitle">"นักศึกษา ประชาชน ประชาธิปไตย"</p>
 
             <div class="ideology-grid">
                 <div class="ideology-card">
                     <div class="ideology-icon">🎓</div>
                     <h3>นักศึกษา</h3>
-                    <p>ยึดมั่นในศักดิ์ศรีและสิทธิของนักศึกษา มุ่งพัฒนาสวัสดิการ ทักษะดิจิทัล
-                        และส่งเสริมพลังคนรุ่นใหม่จากทุกพื้นที่อย่างเท่าเทียม
-                        เพื่อก้าวสู่การเป็นผู้นำแห่งอนาคต</p>
+                    <p>ยึดมั่นในศักดิ์ศรีและสิทธิของนักศึกษา มุ่งพัฒนาสวัสดิการ ทักษะดิจิทัล และส่งเสริมพลังคนรุ่นใหม่จากทุกพื้นที่อย่างเท่าเทียม เพื่อก้าวสู่การเป็นผู้นำแห่งอนาคต</p>
                 </div>
 
                 <div class="ideology-card">
                     <div class="ideology-icon">🤝</div>
                     <h3>ประชาชน</h3>
-                    <p>เชื่อมโยงองค์ความรู้จากรั้วมหาวิทยาลัยสู่ชุมชน เคียงข้างประชาชน เข้าใจอัตลักษณ์ท้องถิ่น
-                        และนำเทคโนโลยีมาสร้างโอกาสทางเศรษฐกิจให้ยั่งยืน</p>
+                    <p>เชื่อมโยงองค์ความรู้จากรั้วมหาวิทยาลัยสู่ชุมชน เคียงข้างประชาชน เข้าใจอัตลักษณ์ท้องถิ่น และนำเทคโนโลยีมาสร้างโอกาสทางเศรษฐกิจให้ยั่งยืน</p>
                 </div>
 
                 <div class="ideology-card">
                     <div class="ideology-icon">⚖️</div>
                     <h3>ประชาธิปไตย</h3>
-                    <p>ยึดมั่นในสิทธิ เสรีภาพ ความเสมอภาค และกระบวนการสันติวิธี กระจายอำนาจการตัดสินใจ
-                        และเปิดโอกาสให้ทุกคนมีส่วนร่วมอย่างโปร่งใส</p>
+                    <p>ยึดมั่นในสิทธิ เสรีภาพ ความเสมอภาค และกระบวนการสันติวิธี กระจายอำนาจการตัดสินใจ และเปิดโอกาสให้ทุกคนมีส่วนร่วมอย่างโปร่งใส</p>
                 </div>
             </div>
         </section>
@@ -177,22 +197,22 @@
 
     <!-- PAGE 3: นโยบายพรรค -->
     <main id="page-policies" class="page-section">
-        <!-- Policy Section: Kitpracha SPARK -->
         <section id="policy" class="policy-section">
             <div class="container">
                 <h3 class="spark-main-title">Kitpracha</h3>
+                <p class="section-subtitle" style="color: #cbd5e1;">SPARK เพื่อขับเคลื่อนมหาวิทยาลัยสู่อนาคต</p>
+
                 <!-- Interactive SPARK Letters -->
                 <div class="spark-interactive-container">
-                    <button class="spark-letter active" onclick="showPolicy('S')">S</button>
-                    <button class="spark-letter" onclick="showPolicy('P')">P</button>
-                    <button class="spark-letter" onclick="showPolicy('A')">A</button>
-                    <button class="spark-letter" onclick="showPolicy('R')">R</button>
-                    <button class="spark-letter" onclick="showPolicy('K')">K</button>
+                    <button class="spark-letter active" onclick="showPolicy('S', event)">S</button>
+                    <button class="spark-letter" onclick="showPolicy('P', event)">P</button>
+                    <button class="spark-letter" onclick="showPolicy('A', event)">A</button>
+                    <button class="spark-letter" onclick="showPolicy('R', event)">R</button>
+                    <button class="spark-letter" onclick="showPolicy('K', event)">K</button>
                 </div>
 
                 <!-- Dynamic Policy Content Boxes -->
                 <div class="policy-display-area">
-
                     <!-- S : Social Student Voice -->
                     <div id="policy-S" class="policy-detail-card active">
                         <div class="policy-card-header">
@@ -203,26 +223,16 @@
                             </div>
                         </div>
                         <p class="policy-intro">
-                            นักศึกษาทุกคนคือส่วนหนึ่งของประชาคมมหาวิทยาลัย
-                            เราต้องการสร้างพื้นที่และกลไกที่ทำให้นักศึกษาสามารถสะท้อนปัญหา ความต้องการ
-                            และข้อเสนอได้อย่างสะดวก พร้อมผลักดันให้เสียงเหล่านั้นถูกนำไปสู่การแก้ไขอย่างเป็นรูปธรรม
+                            นักศึกษาทุกคนคือส่วนหนึ่งของประชาคมมหาวิทยาลัย เราต้องการสร้างพื้นที่และกลไกที่ทำให้นักศึกษาสามารถสะท้อนปัญหา ความต้องการ และข้อเสนอได้อย่างสะดวก พร้อมผลักดันให้เสียงเหล่านั้นถูกนำไปสู่การแก้ไขอย่างเป็นรูปธรรม
                         </p>
                         <div class="policy-checklist">
                             <h4>แนวทางดำเนินงาน:</h4>
                             <ul>
-                                <li><strong>Student Voice Platform:</strong> พัฒนาช่องทางรับฟังความคิดเห็น ข้อเสนอ
-                                    และปัญหาของนักศึกษาอย่างเป็นระบบ พร้อมติดตามผลการดำเนินงาน</li>
-                                <li><strong>Student Forum:</strong> สร้างพื้นที่พูดคุยระหว่างนักศึกษา องค์กรนักศึกษา
-                                    และหน่วยงานที่เกี่ยวข้อง เพื่อร่วมกันเสนอปัญหาและออกแบบแนวทางแก้ไข</li>
-                                <li><strong>Bike for Students:</strong>
-                                    ผลักดันโครงการสนับสนุนจักรยานสำหรับนักศึกษาที่ขาดแคลนทุนทรัพย์ ยืมใช้งาน 1
-                                    ภาคการศึกษา เพื่อลดภาระค่าใช้จ่ายและส่งเสริมความยั่งยืน (SDGs)</li>
-                                <li><strong>Mental Health:</strong>
-                                    ผลักดันการพัฒนาช่องทางรับฟังปัญหาสุขภาพจิตของนักศึกษา
-                                    เพื่อให้เข้าถึงการคำปรึกษาได้อย่างทันท่วงที</li>
-                                <li><strong>ลานเลเพื่อประชาคม:</strong>
-                                    ติดตามความคืบหน้าการปรับปรุงลานเลเพื่อให้กลับมาเปิดใช้งานเป็นพื้นที่สาธารณะสำหรับนักศึกษาโดยเร็ว
-                                </li>
+                                <li><strong>Student Voice Platform:</strong> พัฒนาช่องทางรับฟังความคิดเห็น ข้อเสนอ และปัญหาของนักศึกษาอย่างเป็นระบบ พร้อมติดตามผลการดำเนินงาน</li>
+                                <li><strong>Student Forum:</strong> สร้างพื้นที่พูดคุยระหว่างนักศึกษา องค์กรนักศึกษา และหน่วยงานที่เกี่ยวข้อง เพื่อร่วมกันเสนอปัญหาและออกแบบแนวทางแก้ไข</li>
+                                <li><strong>Bike for Students:</strong> ผลักดันโครงการสนับสนุนจักรยานสำหรับนักศึกษาที่ขาดแคลนทุนทรัพย์ ยืมใช้งาน 1 ภาคการศึกษา เพื่อลดภาระค่าใช้จ่ายและส่งเสริมความยั่งยืน (SDGs)</li>
+                                <li><strong>Mental Health:</strong> ผลักดันการพัฒนาช่องทางรับฟังปัญหาสุขภาพจิตของนักศึกษา เพื่อให้เข้าถึงการคำปรึกษาได้อย่างทันท่วงที</li>
+                                <li><strong>ลานเลเพื่อประชาคม:</strong> ติดตามความคืบหน้าการปรับปรุงลานเลเพื่อให้กลับมาเปิดใช้งานเป็นพื้นที่สาธารณะสำหรับนักศึกษาโดยเร็ว</li>
                             </ul>
                         </div>
                     </div>
@@ -237,24 +247,16 @@
                             </div>
                         </div>
                         <p class="policy-intro">
-                            กิจกรรมนักศึกษาไม่ควรจำกัดอยู่เพียงรูปแบบเดิม ๆ
-                            เราต้องการสร้างพื้นที่ที่เปิดโอกาสให้นักศึกษาได้เรียนรู้ ลงมือทำ แสดงศักยภาพ สร้างเครือข่าย
-                            และมีส่วนร่วมทั้งภายในและภายนอกมหาวิทยาลัย
+                            กิจกรรมนักศึกษาไม่ควรจำกัดอยู่เพียงรูปแบบเดิม ๆ เราต้องการสร้างพื้นที่ที่เปิดโอกาสให้นักศึกษาได้เรียนรู้ ลงมือทำ แสดงศักยภาพ สร้างเครือข่าย และมีส่วนร่วมทั้งภายในและภายนอกมหาวิทยาลัย
                         </p>
                         <div class="policy-checklist">
                             <h4>แนวทางดำเนินงาน:</h4>
                             <ul>
-                                <li><strong>PSU GLOBAL:</strong> มหกรรมการแข่งขันและการเรียนรู้ เปิดพื้นที่พัฒนานวัตกรรม
-                                    ความคิดสร้างสรรค์ และทักษะในศตวรรษที่ 21</li>
-                                <li><strong>PSU SPACE:</strong> เปิดพื้นที่การมีส่วนร่วมรูปแบบใหม่ เช่น Board Game
-                                    เคลื่อนที่ และกิจกรรมสร้างสรรค์เพื่อการแลกเปลี่ยน</li>
-                                <li><strong>PSU WELLNESS:</strong> สร้างพื้นที่สำหรับคนรักสุขภาพ ส่งเสริมการออกกำลังกาย
-                                    สุขภาวะ และการดูแลตนเอง</li>
-                                <li><strong>UNITY FOR IMPACT CAMP SS2:</strong> ค่ายเรียนรู้ชุมชน
-                                    ทำงานร่วมกับพื้นที่จริงเพื่อนำความรู้ไปสร้างประโยชน์ต่อสังคม</li>
-                                <li><strong>PTU CULTURAL:</strong>
-                                    สร้างความร่วมมือระหว่างสถาบันผ่านกิจกรรมแลกเปลี่ยนวัฒนธรรมและการทำประโยชน์เพื่อสังคม
-                                </li>
+                                <li><strong>PSU GLOBAL:</strong> มหกรรมการแข่งขันและการเรียนรู้ เปิดพื้นที่พัฒนานวัตกรรม ความคิดสร้างสรรค์ และทักษะในศตวรรษที่ 21</li>
+                                <li><strong>PSU SPACE:</strong> เปิดพื้นที่การมีส่วนร่วมรูปแบบใหม่ เช่น Board Game เคลื่อนที่ และกิจกรรมสร้างสรรค์เพื่อการแลกเปลี่ยน</li>
+                                <li><strong>PSU WELLNESS:</strong> สร้างพื้นที่สำหรับคนรักสุขภาพ ส่งเสริมการออกกำลังกาย สุขภาวะ และการดูแลตนเอง</li>
+                                <li><strong>UNITY FOR IMPACT CAMP SS2:</strong> ค่ายเรียนรู้ชุมชน ทำงานร่วมกับพื้นที่จริงเพื่อนำความรู้ไปสร้างประโยชน์ต่อสังคม</li>
+                                <li><strong>PTU CULTURAL:</strong> สร้างความร่วมมือระหว่างสถาบันผ่านกิจกรรมแลกเปลี่ยนวัฒนธรรมและการทำประโยชน์เพื่อสังคม</li>
                             </ul>
                         </div>
                     </div>
@@ -269,22 +271,15 @@
                             </div>
                         </div>
                         <p class="policy-intro">
-                            นักศึกษาทุกคนควรได้รับสิทธิ สวัสดิการ ข้อมูล และความช่วยเหลืออย่างทั่วถึง
-                            เราจึงมุ่งพัฒนาระบบสวัสดิการให้เข้าถึงง่าย รวดเร็ว เท่าเทียม และตอบโจทย์ชีวิตจริงของนักศึกษา
+                            นักศึกษาทุกคนควรได้รับสิทธิ สวัสดิการ ข้อมูล และความช่วยเหลืออย่างทั่วถึง เราจึงมุ่งพัฒนาระบบสวัสดิการให้เข้าถึงง่าย รวดเร็ว เท่าเทียม และตอบโจทย์ชีวิตจริงของนักศึกษา
                         </p>
                         <div class="policy-checklist">
                             <h4>แนวทางดำเนินงาน:</h4>
                             <ul>
-                                <li><strong>Student Welfare for All:</strong>
-                                    ผลักดันให้นักศึกษาทุกคนสามารถเข้าถึงสิทธิและสวัสดิการขั้นพื้นฐานด้วยความทั่วถึง
-                                    เท่าเทียม และครอบคลุม</li>
-                                <li><strong>Central Parcel Point:</strong>
-                                    จัดตั้งจุดรับพัสดุส่วนกลางพร้อมระบบกล้องวงจรปิด (CCTV)
-                                    เพิ่มความปลอดภัยและลดการสูญหาย</li>
-                                <li><strong>Emergency Pad Point:</strong>
-                                    ผลักดันการจัดให้มีผ้าอนามัยฉุกเฉินสำหรับนักศึกษา โดยเฉพาะบริเวณอาคารเรียนรวม</li>
-                                <li><strong>Student Emergency Channel:</strong> พัฒนาช่องทางแจ้งเหตุฉุกเฉินและการคุกคาม
-                                    เพื่อให้เข้าถึงความช่วยเหลือได้อย่างรวดเร็ว</li>
+                                <li><strong>Student Welfare for All:</strong> ผลักดันให้นักศึกษาทุกคนสามารถเข้าถึงสิทธิและสวัสดิการขั้นพื้นฐานด้วยความทั่วถึง เท่าเทียม และครอบคลุม</li>
+                                <li><strong>Central Parcel Point:</strong> จัดตั้งจุดรับพัสดุส่วนกลางพร้อมระบบกล้องวงจรปิด (CCTV) เพิ่มความปลอดภัยและลดการสูญหาย</li>
+                                <li><strong>Emergency Pad Point:</strong> ผลักดันการจัดให้มีผ้าอนามัยฉุกเฉินสำหรับนักศึกษา โดยเฉพาะบริเวณอาคารเรียนรวม</li>
+                                <li><strong>Student Emergency Channel:</strong> พัฒนาช่องทางแจ้งเหตุฉุกเฉินและการคุกคาม เพื่อให้เข้าถึงความช่วยเหลือได้อย่างรวดเร็ว</li>
                             </ul>
                         </div>
                     </div>
@@ -299,23 +294,15 @@
                             </div>
                         </div>
                         <p class="policy-intro">
-                            พรรคกิจประชาเชื่อว่านักศึกษาทุกคนควรได้รับการเคารพในสิทธิ เสรีภาพ ศักดิ์ศรี
-                            และความหลากหลายของตัวตน เราต้องการสร้างพื้นที่ที่นักศึกษาสามารถแสดงความคิดเห็น ตั้งคำถาม
-                            แลกเปลี่ยนมุมมอง และมีส่วนร่วมกับประเด็นทางสังคมและการเมืองได้อย่างสร้างสรรค์
+                            พรรคกิจประชาเชื่อว่านักศึกษาทุกคนควรได้รับการเคารพในสิทธิ เสรีภาพ ศักดิ์ศรี และความหลากหลายของตัวตน เราต้องการสร้างพื้นที่ที่นักศึกษาสามารถแสดงความคิดเห็น ตั้งคำถาม แลกเปลี่ยนมุมมอง และมีส่วนร่วมกับประเด็นทางสังคมและการเมืองได้อย่างสร้างสรรค์
                         </p>
                         <div class="policy-checklist">
                             <h4>แนวทางดำเนินงาน:</h4>
                             <ul>
-                                <li><strong>Freedom of Expression:</strong>
-                                    ส่งเสริมพื้นที่สำหรับการแสดงความคิดเห็นและแลกเปลี่ยนมุมมองอย่างสร้างสรรค์</li>
-                                <li><strong>Student Identity:</strong> สนับสนุนให้นักศึกษาสามารถแสดงออกถึงตัวตน ความคิด
-                                    และความหลากหลายของตนเองได้อย่างเหมาะสม</li>
-                                <li><strong>Student Rights Awareness:</strong>
-                                    ส่งเสริมความรู้ความเข้าใจเกี่ยวกับสิทธิของนักศึกษา
-                                    เพื่อให้สามารถใช้สิทธิได้อย่างมีความรับผิดชอบ</li>
-                                <li><strong>Democratic Space:</strong>
-                                    สร้างพื้นที่เรียนรู้และมีส่วนร่วมในประเด็นประชาธิปไตย สังคม และการเมืองของนักศึกษา
-                                </li>
+                                <li><strong>Freedom of Expression:</strong> ส่งเสริมพื้นที่สำหรับการแสดงความคิดเห็นและแลกเปลี่ยนมุมมองอย่างสร้างสรรค์</li>
+                                <li><strong>Student Identity:</strong> สนับสนุนให้นักศึกษาสามารถแสดงออกถึงตัวตน ความคิด และความหลากหลายของตนเองได้อย่างเหมาะสม</li>
+                                <li><strong>Student Rights Awareness:</strong> ส่งเสริมความรู้ความเข้าใจเกี่ยวกับสิทธิของนักศึกษา เพื่อให้สามารถใช้สิทธิได้อย่างมีความรับผิดชอบ</li>
+                                <li><strong>Democratic Space:</strong> สร้างพื้นที่เรียนรู้และมีส่วนร่วมในประเด็นประชาธิปไตย สังคม และการเมืองของนักศึกษา</li>
                             </ul>
                         </div>
                     </div>
@@ -335,19 +322,13 @@
                         <div class="policy-checklist">
                             <h4>แนวทางดำเนินงาน:</h4>
                             <ul>
-                                <li><strong>SOCIAL HACKATHON:</strong> เปิดพื้นที่ให้นักศึกษาได้ร่วมกันคิด
-                                    วิเคราะห์ปัญหาสังคม ออกแบบแนวทางแก้ไข และนำเสนอไอเดียพัฒนาจริง</li>
-                                <li><strong>STUDENT CHANGE MAKER:</strong>
-                                    ผลักดันโครงการเพื่อสังคมของนักศึกษาให้กลายเป็นจริง
-                                    ผ่านการให้คำปรึกษาและสนับสนุนจากองค์กร</li>
-                                <li><strong>KIT KNOWLEDGE SPACE:</strong> พื้นที่แลกเปลี่ยนความรู้ระหว่างนักศึกษา
-                                    เปิดโอกาสให้นำความถนัดมาแบ่งปันให้ผู้อื่น</li>
-                                <li><strong>FUTURE SKILLS:</strong> ส่งเสริมทักษะอนาคต เช่น Critical Thinking,
-                                    Communication, Leadership, Collaboration และ Problem Solving</li>
+                                <li><strong>SOCIAL HACKATHON:</strong> เปิดพื้นที่ให้นักศึกษาได้ร่วมกันคิด วิเคราะห์ปัญหาสังคม ออกแบบแนวทางแก้ไข และนำเสนอไอเดียพัฒนาจริง</li>
+                                <li><strong>STUDENT CHANGE MAKER:</strong> ผลักดันโครงการเพื่อสังคมของนักศึกษาให้กลายเป็นจริง ผ่านการให้คำปรึกษาและสนับสนุนจากองค์กร</li>
+                                <li><strong>KIT KNOWLEDGE SPACE:</strong> พื้นที่แลกเปลี่ยนความรู้ระหว่างนักศึกษา เปิดโอกาสให้นำความถนัดมาแบ่งปันให้ผู้อื่น</li>
+                                <li><strong>FUTURE SKILLS:</strong> ส่งเสริมทักษะอนาคต เช่น Critical Thinking, Communication, Leadership, Collaboration และ Problem Solving</li>
                             </ul>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -371,11 +352,10 @@
 
             <!-- TAB 1: องค์การนักศึกษา -->
             <div id="tab-organization" class="org-tab-content active">
-                <h3 class="group-header-title"><i class="fa-solid fa-user-check"></i> ผู้ลงสมัครองค์การบริหาร
-                    องค์การนักศึกษา</h3>
+                <h3 class="group-header-title"><i class="fa-solid fa-user-check"></i> ผู้ลงสมัครองค์การบริหาร องค์การนักศึกษา</h3>
 
                 <div class="candidate-photo-grid">
-                    <div class="photo-card" onclick="openModal('อนุมัติ', 'นายกองค์การนักศึกษา', 'นายก.jpg')">
+                    <div class="photo-card" onclick="openModal('นายอนุมัติ หลังจิ', 'นายกองค์การนักศึกษา', 'นายก.jpg')">
                         <div class="photo-frame"><img src="นายก.jpg" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">อนุมัติ หลังจิ</div>
@@ -384,7 +364,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นายริดวัน แวนิ', 'อุปนายกฝ่ายบริหาร', 'wang.jpg')">
+                    <div class="photo-card" onclick="openModal('นายอัซมี อูมา', 'รองนายกคนที่ 1', 'รอง1.JPG')">
                         <div class="photo-frame"><img src="รอง1.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">อัซมี อูมา</div>
@@ -393,8 +373,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card"
-                        onclick="openModal('นางสาวแวนาเฟียนา หลงเน๊าะ', 'เหรัญญิก', 'waefiana.jpg')">
+                    <div class="photo-card" onclick="openModal('นางสาวอามาลีนา มามุ', 'รองนายกคนที่ 2', 'รอง2.JPG')">
                         <div class="photo-frame"><img src="รอง2.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">อามาลีนา มามุ</div>
@@ -403,8 +382,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card"
-                        onclick="openModal('นายซุลฟาฮ์มี อีซอ', 'เลขาธิการ', 'นาย ซุลฟาฮ์มีน อีซอ.jpg')">
+                    <div class="photo-card" onclick="openModal('นางสาวนูรูลนูฮา เปาะและ', 'เลขานุการ', 'เลขา.JPG')">
                         <div class="photo-frame"><img src="เลขา.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">นูรูลนูฮา เปาะและ</div>
@@ -413,7 +391,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นายอานัส แมแล', 'นายทะเบียน', 'นาย อนัส แมแล.jpg')">
+                    <div class="photo-card" onclick="openModal('นางสาวตาฮานี เหล็มหมีน', 'เหรัญญิก', 'เหรัญญิก.JPG')">
                         <div class="photo-frame"><img src="เหรัญญิก.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">ตาฮานี เหล็มหมีน</div>
@@ -422,8 +400,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card"
-                        onclick="openModal('นายอัสนาวีย์ ปะกาฮะรัง', 'ฝ่ายประชาสัมพันธ์', 'อัสนาวีย์  ปะกาฮะรัง.JPG')">
+                    <div class="photo-card" onclick="openModal('นางสาวกัลมานี เจ๊ะฮะ', 'ฝ่ายประชาสัมพันธ์', 'ประชาสัมพันธ์.JPG')">
                         <div class="photo-frame"><img src="ประชาสัมพันธ์.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">กัลมานี เจ๊ะฮะ</div>
@@ -432,8 +409,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card"
-                        onclick="openModal('นายอิบรอเฮง เจะเลาะ', 'ฝ่ายเทคโนโลยีสารสนเทศ', 'อิบรอเฮง เจะเลาะ .jpg')">
+                    <div class="photo-card" onclick="openModal('นายอัลบัสรี เจะมะ', 'ฝ่ายศิลปกรรม', 'ศิลปะ.JPG')">
                         <div class="photo-frame"><img src="ศิลปะ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">อัลบัสรี เจะมะ</div>
@@ -442,7 +418,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นายบัสรี มิหนาแดง', 'ฝ่ายพัสดุและอาคารสถานที่', 'พัสดุ.JPG')">
                         <div class="photo-frame"><img src="พัสดุ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">บัสรี มิหนาแดง</div>
@@ -451,7 +427,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นางสาวแวนูรฟารอฮาน อาแว', 'ฝ่ายสวัสดิการ', 'สวัสดิการ.JPG')">
                         <div class="photo-frame"><img src="สวัสดิการ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">แวนูรฟารอฮาน อาแว</div>
@@ -460,7 +436,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นางสาวคอยรูนิซะห์ สากอ', 'ฝ่ายนักศึกษาสัมพันธ์', 'นักศึกษาสัมพันธ์.JPG')">
                         <div class="photo-frame"><img src="นักศึกษาสัมพันธ์.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">คอยรูนิซะห์ สากอ</div>
@@ -469,7 +445,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นางสาวมุมินะฮ์ สือรี', 'ฝ่ายวิเทศสัมพันธ์', 'วิเทศ.PNG')">
                         <div class="photo-frame"><img src="วิเทศ.PNG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">มุมินะฮ์ สือรี</div>
@@ -478,7 +454,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นายดารีมีย์ ตุหวันร่าเหม', 'ฝ่ายวิชาการ', 'วิชาการ.JPG')">
                         <div class="photo-frame"><img src="วิชาการ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">ดารีมีย์ ตุหวันร่าเหม</div>
@@ -487,7 +463,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นายมูฮำหมัดอัซซัด ดะเซ็ง', 'ฝ่ายศิลปะและวัฒนธรรม', 'วัฒนธรรม.JPG')">
                         <div class="photo-frame"><img src="วัฒนธรรม.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">มูฮำหมัดอัซซัด ดะเซ็ง</div>
@@ -496,7 +472,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นายอัฟนันต์ บิลลาเต๊ะ', 'ฝ่ายบำเพ็ญประโยชน์', 'บำเพ็ญ.JPG')">
                         <div class="photo-frame"><img src="บำเพ็ญ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">อัฟนันต์ บิลลาเต๊ะ</div>
@@ -505,7 +481,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นายมูฮำหมัดไฟซอล หะยีมามะ', 'ฝ่ายกีฬา', 'กีฬา.JPG')">
                         <div class="photo-frame"><img src="กีฬา.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">มูฮำหมัดไฟซอล หะยีมามะ</div>
@@ -514,7 +490,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นายซอฟรอน ยากะจิ', 'ฝ่ายสื่อ', 'สื่อ.JPG')">
                         <div class="photo-frame"><img src="สื่อ.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">ซอฟรอน ยากะจิ</div>
@@ -523,7 +499,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นายอามีร แยแล', 'ฝ่ายประสานงาน', 'ประสานงาน.JPG')">
                         <div class="photo-frame"><img src="ประสานงาน.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">อามีร แยแล</div>
@@ -532,7 +508,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นางสาวอันดา สุหลง', 'ฝ่ายพิธีการ', 'พิธีการ.jpg')">
                         <div class="photo-frame"><img src="พิธีการ.jpg" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">อันดา สุหลง</div>
@@ -541,7 +517,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นายโซฟียัน กะดะแซ', 'ฝ่ายพยาบาล', 'พยาบาล.JPG')">
                         <div class="photo-frame"><img src="พยาบาล.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">โซฟียัน กะดะแซ</div>
@@ -550,7 +526,7 @@
                         </div>
                     </div>
 
-                    <div class="photo-card" onclick="openModal('นางสาวภัทรา รักเรียน', 'ฝ่ายประชาสัมพันธ์', 'แนน.JPG')">
+                    <div class="photo-card" onclick="openModal('นางสาวอานีส อาลีมามะ', 'ฝ่ายกิจกรรม', 'กิจกรรม.JPG')">
                         <div class="photo-frame"><img src="กิจกรรม.JPG" alt="ผู้สมัคร"></div>
                         <div class="photo-card-info">
                             <div class="candidate-name-th">อานีส อาลีมามะ</div>
@@ -564,8 +540,7 @@
             <!-- TAB 2: สภานักศึกษา -->
             <div id="tab-council" class="org-tab-content">
                 <div class="council-section">
-                    <h3 class="group-header-title"><i class="fa-solid fa-layer-group"></i> สมาชิกสภานักศึกษา
-                        องค์การนักศึกษาสัดส่วนทั่วไป</h3>
+                    <h3 class="group-header-title"><i class="fa-solid fa-layer-group"></i> สมาชิกสภานักศึกษา องค์การนักศึกษาสัดส่วนทั่วไป</h3>
                     <div class="candidate-photo-grid">
                         <div class="photo-card">
                             <div class="photo-frame"><img src="wang.jpg" alt="ผู้สมัคร"></div>
@@ -725,8 +700,8 @@
                 <hr class="section-divider">
 
                 <div class="council-section">
-                    <h2 class="sub-section-title"><i class="fa-solid fa-graduation-cap"></i> สมาชิกสภานักศึกษา
-                        องค์การนักศึกษาสัดส่วนคณะ</h2>
+                    <h2 class="sub-section-title"><i class="fa-solid fa-graduation-cap"></i> สมาชิกสภานักศึกษา องค์การนักศึกษาสัดส่วนคณะ</h2>
+                    
                     <div class="faculty-block">
                         <div class="faculty-title"><i class="fa-solid fa-university"></i> คณะศึกษาศาสตร์</div>
                         <div class="candidate-photo-grid">
@@ -738,7 +713,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="กณวรระน์ ศรีรักษ์.JPG" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -747,7 +721,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="บีลาล เจ๊ะเลาะ.jpg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -756,7 +729,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="มูฮำหมัดซาฟีอีน หะ.jpg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -765,7 +737,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="มูรณี บาเหะ.jpeg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -778,8 +749,7 @@
                     </div>
 
                     <div class="faculty-block">
-                        <div class="faculty-title"><i class="fa-solid fa-university"></i> คณะมนุษยศาสตร์และสังคมศาสตร์
-                        </div>
+                        <div class="faculty-title"><i class="fa-solid fa-university"></i> คณะมนุษยศาสตร์และสังคมศาสตร์</div>
                         <div class="candidate-photo-grid">
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="มูฮำหมัด เจ๊ะเด็ง.jpg" alt="ผู้สมัคร"></div>
@@ -789,7 +759,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="ชัชวีร์ แอเหย็บ.jpg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -798,7 +767,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="กูซูรัยนี กาซอ.jpg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -807,7 +775,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="อัจฉริยา นัยนา.jpg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -816,7 +783,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="เจ๊ะฮานีซะห หะยีมะแซ.png" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -839,7 +805,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="ฟุรกอน สาแล.JPG" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -848,7 +813,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="ไรบีนา.JPG" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -871,7 +835,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="มูฮำหมัด บิลังโหลด.jpg" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -894,7 +857,6 @@
                                     <span class="candidate-position-tag">ยินยอม</span>
                                 </div>
                             </div>
-
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="อาหมัดบาดาวี.JPG" alt="ผู้สมัคร"></div>
                                 <div class="photo-card-info">
@@ -907,8 +869,7 @@
                     </div>
 
                     <div class="faculty-block">
-                        <div class="faculty-title"><i class="fa-solid fa-university"></i> คณะวิทยาศาสตร์และเทคโนโลยี
-                        </div>
+                        <div class="faculty-title"><i class="fa-solid fa-university"></i> คณะวิทยาศาสตร์และเทคโนโลยี</div>
                         <div class="candidate-photo-grid">
                             <div class="photo-card">
                                 <div class="photo-frame"><img src="อิบรอเฮง เจะเลาะ .jpg" alt="ผู้สมัคร"></div>
@@ -948,7 +909,6 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -960,12 +920,10 @@
             <h2 class="section-title">ผลงานที่เคยทำ</h2>
             <p class="section-subtitle">เส้นทางการขับเคลื่อนที่ผ่านการพิสูจน์มาแล้วด้วยการลงมือทำจริง</p>
 
-            <!-- Card ผลงาน -->
             <div class="portfolio-card">
                 <span class="portfolio-term">ภาคเรียนที่ 1 / 2567</span>
                 <h3 class="portfolio-title">โครงการ Unity for Impact Camp</h3>
 
-                <!-- แกลเลอรีรูปภาพแบบ Grid 2x2 -->
                 <div class="portfolio-gallery">
                     <div class="img-wrapper">
                         <img src="ต01.jpg" alt="ภาพบรรยากาศโครงการ 1" loading="lazy">
@@ -982,8 +940,7 @@
                 </div>
 
                 <p class="portfolio-desc">
-                    ประสานงานติดตั้งโต๊ะนั่งอ่านหนังสือพร้อมปลั๊กไฟและระบบ Wi-Fi เพิ่มเติม ณ
-                    บริเวณลานกิจกรรมส่วนกลางสำเร็จ
+                    ประสานงานติดตั้งโต๊ะนั่งอ่านหนังสือพร้อมปลั๊กไฟและระบบ Wi-Fi เพิ่มเติม ณ บริเวณลานกิจกรรมส่วนกลางสำเร็จ
                 </p>
             </div>
         </section>
@@ -993,11 +950,9 @@
     <main id="page-election" class="page-section">
         <section class="section-padding container">
             <h2 class="section-title">ข้อมูลการเลือกตั้ง</h2>
-            <p class="section-subtitle">นับถอยหลังสู่การเลือกตั้งองค์การบริหาร องค์การนักศึกษา&องค์การบริหาร สภานักศึกษา
-            </p>
+            <p class="section-subtitle">นับถอยหลังสู่การเลือกตั้งองค์การบริหาร องค์การนักศึกษา & องค์การบริหาร สภานักศึกษา</p>
 
             <div class="card-box election-card">
-
                 <!-- กล่องนับถอยหลัง (Countdown Timer) -->
                 <div class="countdown-container">
                     <div class="countdown-box">
@@ -1022,8 +977,7 @@
                 <div class="election-info-list">
                     <p><strong><i class="fa-solid fa-calendar-days"></i> วันลงคะแนน:</strong> 26 สิงหาคม 2569</p>
                     <p><strong><i class="fa-solid fa-clock"></i> เวลา:</strong> 08:30 - 16:30 น.</p>
-                    <p><strong><i class="fa-solid fa-location-dot"></i> สถานที่:</strong> อาคารกิจกรรมนักศึกษา และ
-                        ระบบลงคะแนนออนไลน์</p>
+                    <p><strong><i class="fa-solid fa-location-dot"></i> สถานที่:</strong> อาคารกิจกรรมนักศึกษา และ ระบบลงคะแนนออนไลน์</p>
                 </div>
 
                 <!-- แบนเนอร์รณรงค์ -->
@@ -1065,22 +1019,16 @@
                 <div class="footer-social">
                     <h4>ติดตามเรา</h4>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/share/19N13UrFCD/?mibextid=wwXIfr" target="_blank"
-                            rel="noopener noreferrer" aria-label="Facebook">
+                        <a href="https://www.facebook.com/share/19N13UrFCD/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                             <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="
-https://www.instagram.com/kitpracha.party?igsh=NTFnbjZpcXJiYmV3" target="_blank" rel="noopener noreferrer"
-                            aria-label="Instagram">
+                        <a href="https://www.instagram.com/kitpracha.party?igsh=NTFnbjZpcXJiYmV3" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                             <i class="fa-brands fa-instagram"></i>
                         </a>
-                        <a href="
-https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" rel="noopener noreferrer"
-                            aria-label="TikTok">
+                        <a href="https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                             <i class="fa-brands fa-tiktok"></i>
                         </a>
-                        <a href="https://page.line.me/yourlineid" target="_blank" rel="noopener noreferrer"
-                            aria-label="Line">
+                        <a href="https://page.line.me/yourlineid" target="_blank" rel="noopener noreferrer" aria-label="Line">
                             <i class="fa-brands fa-line"></i>
                         </a>
                     </div>
@@ -1093,9 +1041,9 @@ https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" 
         </div>
     </footer>
 
-    <!-- JavaScript สำหรับควบคุมระบบเว็บไฟล์เดียว -->
+    <!-- JavaScript ควบคุมระบบเว็บ -->
     <script>
-        // 1. ฟังก์ชันสลับหน้าเว็บ (SPA Router)
+        // 1. ระบบสลับหน้าเว็บ (SPA Router)
         function switchPage(pageId, tabId = null) {
             document.querySelectorAll('.page-section').forEach(page => page.classList.remove('active'));
             const targetPage = document.getElementById('page-' + pageId);
@@ -1111,7 +1059,7 @@ https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" 
             if (tabId) switchOrgTab(tabId);
         }
 
-        // 2. ฟังก์ชันสลับ Tab องค์การ / สภาพ
+        // 2. ระบบสลับ Tab องค์การ / สภา
         function switchOrgTab(tabName) {
             document.querySelectorAll('.org-tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.org-tab-btn').forEach(btn => btn.classList.remove('active'));
@@ -1126,7 +1074,7 @@ https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" 
             }
         }
 
-        // 3. ฟังก์ชัน Modal Popup
+        // 3. ระบบ Modal Popup แสดงข้อมูลผู้สมัคร
         function openModal(name, role, imgSrc) {
             const modal = document.getElementById('candidateModal');
             document.getElementById('modalBody').innerHTML = `
@@ -1150,22 +1098,8 @@ https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" 
             document.getElementById('candidateModal').classList.remove('show');
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            // ระบบ Hamburger Toggle สำหรับมือถือ
-            document.getElementById('hamburger').addEventListener('click', () => {
-                document.getElementById('navLinks').classList.toggle('active');
-            });
-
-            // ปิด Modal เมื่อคลิกนอกกล่อง
-            window.addEventListener('click', (event) => {
-                const modal = document.getElementById('candidateModal');
-                if (event.target === modal) closeModal();
-            });
-        });
-
-        // ฟังก์ชันคำนวณเวลานับถอยหลัง
+        // 4. ระบบ Countdown นับถอยหลังวันเลือกตั้ง
         function startCountdown() {
-            // กำหนดวันเลือกตั้ง: 26 สิงหาคม 2569 เวลา 08:30 น.
             const electionTarget = new Date('August 26, 2026 08:30:00').getTime();
 
             function updateTimer() {
@@ -1195,31 +1129,87 @@ https://www.tiktok.com/@kitpracha_party?_r=1&_t=ZS-98ih3grl0kB" target="_blank" 
             setInterval(updateTimer, 1000);
         }
 
-        // เรียกใช้งานเมื่อโหลดหน้าเว็บเรียบร้อยแล้ว
-        document.addEventListener('DOMContentLoaded', () => {
-            startCountdown();
-        });
-
-
-        function showPolicy(letter) {
-            // 1. ซ่อนกล่องรายละเอียดนโยบายทั้งหมดก่อน
+        // 5. ระบบสลับนโยบาย SPARK
+        function showPolicy(letter, event) {
             const allCards = document.querySelectorAll('.policy-detail-card');
             allCards.forEach(card => card.classList.remove('active'));
 
-            // 2. ยกเลิกสถานะปุ่มตัวอักษรทั้งหมด
             const allButtons = document.querySelectorAll('.spark-letter');
             allButtons.forEach(btn => btn.classList.remove('active'));
 
-            // 3. แสดงกล่องรายละเอียดเฉพาะตัวที่ถูกคลิก
             const targetCard = document.getElementById('policy-' + letter);
-            if (targetCard) {
-                targetCard.classList.add('active');
-            }
+            if (targetCard) targetCard.classList.add('active');
 
-            // 4. เปลี่ยนปุ่มตัวอักษรที่ถูกคลิกให้เป็นสถานะ active
-            event.currentTarget.classList.add('active');
+            if (event && event.currentTarget) {
+                event.currentTarget.classList.add('active');
+            }
         }
 
+        // 6. ระบบ Background Slider ควบคุมพื้นหลังเลื่อนสลับภาพ
+        // 6. ระบบ Background Slider ควบคุมพื้นหลังเลื่อนสลับภาพ
+        let currentSlide = 0;
+        let autoSlideInterval;
+
+        function getTotalSlides() {
+            return document.querySelectorAll('.hero-bg-slide').length;
+        }
+
+        function updateSlider() {
+            const allSlides = document.querySelectorAll('.hero-bg-slide');
+            allSlides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide);
+            });
+
+            const dots = document.querySelectorAll('.hero-indicators .dot');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+        }
+
+        function moveSlide(direction) {
+            const totalSlides = getTotalSlides();
+            currentSlide += direction;
+            if (currentSlide >= totalSlides) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = totalSlides - 1;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateSlider();
+            resetAutoSlide();
+        }
+
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                moveSlide(1);
+            }, 5000); // เปลี่ยนภาพทุกๆ 5 วินาที
+        }
+
+        function resetAutoSlide() {
+            clearInterval(autoSlideInterval);
+            startAutoSlide();
+        }
+
+        // Event Listener เมื่อโหลดหน้าเว็บเสร็จ
+        document.addEventListener('DOMContentLoaded', () => {
+            startCountdown();
+            startAutoSlide();
+
+            // เมนู Hamburger บนมือถือ
+            document.getElementById('hamburger').addEventListener('click', () => {
+                document.getElementById('navLinks').classList.toggle('active');
+            });
+
+            // ปิด Modal เมื่อคลิกด้านนอก
+            window.addEventListener('click', (event) => {
+                const modal = document.getElementById('candidateModal');
+                if (event.target === modal) closeModal();
+            });
+        });
+
+        
     </script>
 </body>
 
