@@ -1015,60 +1015,97 @@ nav {
 /* ==========================================================================
    10. Footer
    ========================================================================== */
+/* ==========================================================================
+   10. Footer Styling
+   ========================================================================== */
 footer {
     background: var(--dark-color);
     color: #fff;
-    padding: 3rem 0 1.5rem 0;
+    padding: 3.5rem 0 2rem 0;
     margin-top: 4rem;
+    width: 100%;
 }
 
 .footer-content {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    gap: 2rem;
-    margin-bottom: 2rem;
+    gap: 2.5rem;
+    margin-bottom: 2.5rem;
+    align-items: start;
+}
+
+.footer-brand h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    color: #ffffff;
 }
 
 .footer-brand span { 
     color: var(--secondary-color); 
 }
 
+.footer-brand p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 320px;
+}
+
+.footer-links h4,
+.footer-social h4 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
 .footer-links ul { 
     list-style: none; 
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
 }
 
 .footer-links a { 
     color: #cbd5e1; 
     text-decoration: none; 
     cursor: pointer; 
+    font-size: 0.95rem;
     transition: var(--transition); 
 }
 
 .footer-links a:hover { 
     color: var(--secondary-color); 
+    padding-left: 4px;
 }
 
 .social-icons { 
     display: flex; 
     gap: 0.8rem; 
+    flex-wrap: wrap;
 }
 
 .social-icons a {
     color: #fff;
-    width: 38px;
-    height: 38px;
-    background: rgba(255, 255, 255, 0.1);
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.08);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
     transition: var(--transition);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-icons a:hover {
     background: var(--secondary-color);
     color: var(--dark-color);
+    transform: translateY(-3px);
 }
 
 .footer-bottom {
@@ -1077,6 +1114,27 @@ footer {
     padding-top: 1.5rem;
     color: #64748b;
     font-size: 0.85rem;
+}
+
+/* ปรับแต่งสำหรับหน้าจอมือถือ (ป้องกันการชิดขอบและจัดบล็อกเรียงเดี่ยว) */
+@media (max-width: 768px) {
+    footer {
+        padding: 3rem 1.5rem 2rem 1.5rem;
+    }
+
+    .footer-content { 
+        grid-template-columns: 1fr; /* ปรับให้เรียงลงมาทีละหัวข้อ */
+        gap: 2rem;
+        text-align: left;
+    }
+
+    .footer-brand p {
+        max-width: 100%;
+    }
+
+    .social-icons {
+        justify-content: flex-start;
+    }
 }
 
 /* ==========================================================================
